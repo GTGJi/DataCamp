@@ -1,0 +1,4 @@
+import pandas as pd
+
+row_labels = ['a','b']
+dataframe.index = row_labels
