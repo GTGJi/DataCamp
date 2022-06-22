@@ -1,0 +1,18 @@
+list.remove() # According to the variable to delete in a list.
+
+del list[1:5] # Delete variables from index 1 to 5.
+
+list.clear() # Clear the whole list.
+
+list.pop(1) # Remove an item by index and get its value. 
+     pop()        If the argument is omitted, the last item is deleted.
+     
+
+# Comprehension:
+l = ['Alice', 'Bob', 'Charlie', 'Bob', 'David']
+
+print([s for s in l if s != 'Bob'])
+# ['Alice', 'Charlie', 'David']
+
+print([s for s in l if s.endswith('e')])
+# ['Alice', 'Charlie']
