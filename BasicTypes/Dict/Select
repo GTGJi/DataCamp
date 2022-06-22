@@ -5,4 +5,6 @@ dict['key']
 dict.get('key') # Can find the value with the key. 
                   But dict.get() wont return an error when no key found.
 
-l
+dict.items() # Print all elements. 
+for key, value in dict.items():
+  print(key, value) # Get key and value seperately.
