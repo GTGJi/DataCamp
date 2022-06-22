@@ -1,0 +1,41 @@
+# The following code is designed for save the processed data into a pickle so that we do not need to proceed again
+# once the big data processing interrupt.
+
+import pickle
+import numpy as np
+import pandas as pd
+from datetime import datetime
+
+user_dir = 'C:/Users/jzhou40/Documents/summer_intern/Ji_pheonix/20170929_userID.csv'
+df = pd.read_csv(user_dir)
+user_names = list(df["user_id"])
+processed = {}
+
+starttime = datetime.now()
+for name in user_names:
+    processed[name] = np.random.rand()
+    with open('processed.pickle', 'wb') as handle:
+        pickle.dump(processed, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    handle.close()
+endtime = datetime.now()
+print(f"Time duration = {endtime-starttime}")
+
+
+with open('processed.pickle','rb') as handle:
+    processed = pickle.load(handle)
+handle.close()
+user_names_copy = user_names.copy() # For loop only
+for i in user_names_copy:
+    if processed.get(i) is not None:
+        user_names.remove(i)
+del user_names_copy
+
+####### TEST PART #########
+"""
+list(processed.items())[:5]
+len(list(processed.items()))
+user_names[:5]
+len(user_names)
+len(np.unique(user_names))
+"""
+
