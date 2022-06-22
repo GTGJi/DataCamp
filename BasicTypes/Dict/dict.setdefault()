@@ -1,0 +1,3 @@
+The setdefault() method returns the value of the item with the specified key.
+
+If the key does not exist, insert the key, with the specified value, see example below
