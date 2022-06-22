@@ -1,0 +1,2 @@
+figure(figsize = (12,8)) # figsize to change the size of figure
+create a figure object to show plot
