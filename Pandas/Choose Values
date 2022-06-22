@@ -1,0 +1,34 @@
+for lab, row in brics.iterrows():
+      print(lab + ":" + row['capital'])      
+# lab shows labels of each row. row shows entire panda series of that row with attributes.
+ 
+      brics.loc[lab, "name_length"] = len(row["country"])
+OR:
+brics["name_length"] = brics["country"].apply(len)
+
+############################ Rows and Columns ###################################################
+import pandas as pd
+
+df['column_name'] # return column with index, but the type is series. 
+df[['column_name']] # can return a 1-d data frame
+
+df[1:4] # print the 2 to 4 rows
+loc (label-based)
+[[]] return data frame too.
+
+df.loc[["a","v"],["1","2"]] # print the intersections of a, b rows and 1,2 columns
+
+df.loc[:,[]] # choose columns
+
+
+iloc(integer position-based)
+df.iloc[:,[3,4]]
+
+ # Careful: for both loc and iloc, cannot use the expresion such as 1:3 in square brackets. 
+            Can only use [1,2,3,4]
+
+Multiple conditions:
+2 ways: 
+df.loc[(df['a']>5) & (df['a'] <10)]
+
+df[np.logical_and(df['a']>5, df['a']<10)]
