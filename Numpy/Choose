@@ -1,4 +1,4 @@
 From 2D numpy arrays:
-  for val in np.nditer(2darray):
-      print(value)
+for val in np.nditer(2darray):
+    print(value)
       
