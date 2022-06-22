@@ -20,3 +20,10 @@ output: [6,7,8,9]
 np_list_b[2] # Print the third row.
 np_list_b[:,1] # Print the second column.
 np_list_b[1,2] # print the second row and the third column: 6
+
+
+####### Multiple conditions:
+2 ways: 
+df.loc[(df['a']>5) & (df['a'] <10)]
+
+df[np.logical_and(df['a']>5, df['a']<10)]
