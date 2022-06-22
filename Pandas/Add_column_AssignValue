@@ -1,0 +1,10 @@
+df['new_column'] = new_value
+
+For Example:
+
+df["Type"] = 0
+
+df["new_column"] = df["another_column"].apply(len)
+or
+for lab, row in df.iterrows():
+    df.loc[lab, "new_column"] = len(row["another_column"])
