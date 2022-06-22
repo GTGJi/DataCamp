@@ -1,0 +1,8 @@
+np.logical_and()
+np.logical_or()
+np.logical_not()
+
+For example:
+np.logical_and(bmi>21, bmi<22)
+
+cannot use and, or, not directly.
