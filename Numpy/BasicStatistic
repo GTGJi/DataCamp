@@ -1,0 +1,27 @@
+import numpy as np
+
+array_a = np.array([[1,2,3,4,5],
+                    [6,7,8,9,10],
+                    [11,12,13,14,15],
+                    [16,17,18,19,20]
+                    ])
+
+>>> array_a.shape
+(4, 5)
+>>> np.mean(array_a[:,3])
+11.5
+>>> np.median(array_a)
+10.5
+>>> np.std(array_a[1])
+1.4142135623730951
+>>> np.corrcoef(array_a[:,0],array_a[:,3])
+array([[1., 1.],
+       [1., 1.]])
+       
+>>> array_b = np.round(np.random.normal(1.75,0.2,1000),2)
+>>> array_c = np.round(np.random.normal(65,15,1000),2)
+>>> np_data = np.column_stack((array_b, array_c)) # Be careful about Parentheses.
+
+>>> np.corrcoef(np_data[:,0],np_data[:,1])
+array([[ 1.       , -0.0140682],
+       [-0.0140682,  1.       ]])
