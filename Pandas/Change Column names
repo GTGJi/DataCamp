@@ -1,0 +1,2 @@
+    col_names = ["id", "arrive_time", "departure_time", "lon", "lat", "s_p_type"]
+    s_p = pd.DataFrame(columns=col_names)
