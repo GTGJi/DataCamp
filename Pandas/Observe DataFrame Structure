@@ -1,0 +1,7 @@
+df.head(5)
+df.info() # name of columns, data type, check if having missing values
+df.shape # rows and cols
+df.describe() # simple statistics such as: count, mean, std, min, max, and 1,2,3 quartiles
+df.values # show rows
+df.columns # column names
+df.index # row names or index
