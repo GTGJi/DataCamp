@@ -1,1 +1,6 @@
+list[index] = new_value # Change the value with the index in the list to a new value
 
+lista = [1,2,3,4]
+lista[1] = 5
+print(lista)
+#[1,5,3,4]
