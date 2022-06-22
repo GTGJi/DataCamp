@@ -1,0 +1,2 @@
+dict['key'] = value
+dict.update({'key':'value'})
