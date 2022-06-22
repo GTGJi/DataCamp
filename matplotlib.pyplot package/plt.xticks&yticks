@@ -1,0 +1,4 @@
+plt.yticks([1,2,3,4],
+           ["1B","2B","3B","4B"])
+
+# control ticks with names ["1B"....]
