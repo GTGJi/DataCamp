@@ -1,0 +1,8 @@
+list.append() # Can add a list as one element.
+
+list.extend() # Add each element in the list to the first list.
+
+For example:
+lista = [1,2,3]; listb = [4,5]
+lista.append(listb) will get [1,2,3,[4,5]] length: 4
+lista.extend(listb) will get [1,2,3,4,5] length: 5
