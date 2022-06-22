@@ -1,0 +1,15 @@
+'''
+    Jump the empty files
+'''
+import os
+import pandas as pd
+import pandas.errors
+
+dir = 'C:/Users/jzhou40/Documents/summer_intern/Ji_pheonix/20170929/7days/'
+temp_fnames = [f for f in os.listdir(dir) if f.endswith('-selected.csv')]
+fnames = [f.split('-')[0] for f in temp_fnames]
+# fnames[2] is the empty file
+try:
+    df = pd.read_csv(dir+fnames[2]+'-selected.csv')
+except pandas.errors.EmptyDataError:
+    print(f'{fnames[2]} is empty and has been skiped')
