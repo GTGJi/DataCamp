@@ -1,0 +1,5 @@
+np.random.rand() # pseudo-random number
+
+np.random.seed(123)
+
+np.random.randint(0,2) # randomly generate 0 or 1. 2 is not going be included.
