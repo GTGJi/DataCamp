@@ -7,8 +7,8 @@ OR:
 brics["name_length"] = brics["country"].apply(len)
 
 ############################ Rows and Columns ###################################################
-import pandas as pd
-
+df['colname'].isin(["str1","str2"])
+##################
 df['column_name'] # return column with index, but the type is series. 
 df[['column_name']] # can return a 1-d data frame
 
