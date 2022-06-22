@@ -1,0 +1,1 @@
+plt.scatter(x,y, s = "size argument", alpha = "opacity of the bubbles", c = "color")
