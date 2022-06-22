@@ -1,0 +1,5 @@
+Use powershell:
+Get-Content *.csv| Add-Content output.csv
+
+Or python (but slower):
+pd.concat([pd.read_csv(f) for f in os.listdir(path) ], ignore_index = False)
