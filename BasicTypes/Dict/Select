@@ -1,0 +1,8 @@
+dict.keys() # Print keys
+dict.values() # Print Values
+
+dict['key']
+dict.get('key') # Can find the value with the key. 
+                  But dict.get() wont return an error when no key found.
+
+l
