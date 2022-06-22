@@ -28,7 +28,8 @@ df.iloc[:,[3,4]]
             Can only use [1,2,3,4]
 
 ## Multiple conditions:
-2 ways: 
+df[(df['a']>5) & (df['a'] <10)]
+
 df.loc[(df['a']>5) & (df['a'] <10)]
 
 df[np.logical_and(df['a']>5, df['a']<10)]
