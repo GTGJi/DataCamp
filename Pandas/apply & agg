@@ -1,0 +1,12 @@
+
+
+>>> array_a[['first','third']].agg([np.median, np.mean, len])
+        first  third
+median    3.0   13.0
+mean      3.0   13.0
+len       5.0    5.0
+>>> array_a[['first','third']].apply([np.median, np.mean, len])
+        first  third
+median    3.0   13.0
+mean      3.0   13.0
+len       5.0    5.0
