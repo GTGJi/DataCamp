@@ -1,0 +1,2 @@
+df.set_index('col')
+df.reset_index(drop=True) # Drop True will delete the index column
