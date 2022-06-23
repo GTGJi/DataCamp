@@ -2,3 +2,4 @@ df['column'].mean()
 .median()
 .min()
 .max()
+.quantile(0.25) # 25% quantile
