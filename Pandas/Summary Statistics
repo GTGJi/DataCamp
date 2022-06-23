@@ -3,3 +3,7 @@ df['column'].mean()
 .min()
 .max()
 .quantile(0.25) # 25% quantile
+.cumsum()
+.cummax()
+.cummin()
+.cumprod()
