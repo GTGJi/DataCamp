@@ -1,0 +1,4 @@
+df['column'].mean()
+.head()
+.info()
+.
