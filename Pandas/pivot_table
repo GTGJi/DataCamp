@@ -1,0 +1,8 @@
+df.pivot_table(valus = '', index = '', columns = '', fill_value = '', aggfunc = [] , margins = True/False)
+
+values: values want to check
+index: group by
+columns: second group by 
+fill_value: make all missing value(NaN) as 0
+aggfunc: apply functions such as np.median, np.mean
+margins: Count for each column, mean for each row by default
