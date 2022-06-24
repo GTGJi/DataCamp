@@ -1,0 +1,7 @@
+df.isna().any() # show which column has missing values
+df.isna().sum() # check how many missing values for each column
+
+Can even use .plot(kind="bar")
+
+df.dropna() # drop rows containing missing value
+df.fillna(0) # fill the missing values with 0
