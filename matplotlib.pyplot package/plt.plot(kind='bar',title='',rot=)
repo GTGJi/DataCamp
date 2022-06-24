@@ -1,0 +1,2 @@
+kind = 'bar'/'line'
+rot = 45 # rotate x labels by 45 degrees
