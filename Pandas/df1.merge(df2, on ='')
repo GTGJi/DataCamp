@@ -1,4 +1,4 @@
 
 
-on:  based on which column to merge. 
+on = ['col1','col2']:  based on which column to merge. 
 suffixes = ('_ward','_census'): Give suffixes to each data frame so that columns with same name having different suffixes.
