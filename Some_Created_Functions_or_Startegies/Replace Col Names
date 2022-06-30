@@ -1,0 +1,26 @@
+# This code is to replace the name of one or more columns of a dataframe containg a particular string to another name. 
+import pandas as pd
+import os
+
+def replaceColName(dframe, original_name, replacement):
+    # Convert the column name to a list.
+    colnames = dframe.columns.tolist()
+    for name in colnames:
+        if original_name in name:
+            # If containg the particular string, replace the column.
+            idx = colnames.index(f"{name}")
+            colnames[idx] = replacement
+            dframe.columns = colnames
+    return dframe
+
+if __name__ == '__main__':
+    # Read a directory and file names in the directory.
+    data_dir = 'C:/Users/jzhou40/Documents/summer_intern/test-data-Pheonix/test1/'
+    fnames = [f for f in os.listdir(data_dir) if f.endswith(".csv")]
+    
+    strInCol = str(input("what string you want to replace: "))
+    strOutCol = str(input("Replace to: "))
+    # For each file in the directory, replace the name.
+    for name in fnames:
+        temp_df = pd.read_csv(data_dir + name)
+        temp_df = replaceColName(temp_df,strInCol,strOutCol)
