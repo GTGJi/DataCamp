@@ -1,0 +1,11 @@
+1. Change the string type to string[pyarrow] type.
+  Can reduce the memory usage and improve the processing speed.
+  For example: 
+    from dask.utils import format_bytes
+    format_bytes(df.col1.astype('string').memory_usage(deep=True)) # 72.44 MB
+    format_bytes(df.col1.astype('string[pyarrow]').memory_usage(deep=True)) # 21.90 MB
+
+2. Import CSV as DASK dataframe
+  import dask.dataframe as dd
+  ddf = dd.read_csv( ,dtype = dtypes)
+ 
