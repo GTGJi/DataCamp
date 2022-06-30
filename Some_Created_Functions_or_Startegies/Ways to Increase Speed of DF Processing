@@ -7,5 +7,6 @@
 
 2. Import CSV as DASK dataframe
   import dask.dataframe as dd
+  dtypes = {}
   ddf = dd.read_csv( ,dtype = dtypes)
  
