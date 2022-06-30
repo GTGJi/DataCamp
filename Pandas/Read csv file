@@ -1,4 +1,4 @@
 df = pd.read_csv('path', index_col = 0, nrows = )
 # index_col = 0 can make the first column be the index column, instead of the numeric index column that is automatically added.
 # nrows: can choose limited rows
-# dtypes: Assign data types
+# dtype: Assign data types
