@@ -1,4 +1,4 @@
-1. Change the string type to string[pyarrow] type.
+1. Avoid object type because it is too slow to process. Change the string type to string[pyarrow] type.
   Can reduce the memory usage and improve the processing speed.
   For example: 
     from dask.utils import format_bytes
@@ -7,6 +7,25 @@
 
 2. Import CSV as DASK dataframe
   import dask.dataframe as dd
-  dtypes = {}
+  dtypes = { "col1":"string[pyarrow]" , "col2":'int64'......}
   ddf = dd.read_csv( ,dtype = dtypes)
  
+3. Split data in multiple files
+  ddf.repartition(partition_size = '100MB').to_csv('data/csvs')
+   
+  ddf = dd.read_csv("data/csvs/*.part", dtype=better_dtypes)
+  ddf.groupby("id1", dropna=False, observed=True).agg({"v1": "sum"}).compute()
+  
+4. Use parquet instead of CSV
+  ddf.to_parquet("data/parquet", engine="pyarrow", compression=None)
+  ddf = dd.read_parquet("data/parquet", engine="pyarrow")
+  ddf.groupby("id1", dropna=False, observed=True).agg({"v1": "sum"}).compute()
+  
+5. Compress parquet files with snappy
+  ddf.to_parquet("data/snappy-parquet", engine="pyarrow", compression="snappy")
+  ddf = dd.read_parquet("data/snappy-parquet", engine="pyarrow")
+  ddf.groupby("id1", dropna=False, observed=True).agg({"v1": "sum"}).compute()
+  
+6. Leverage column pruning
+  ddf = dd.read_parquet("data/snappy-parquet", engine="pyarrow", columns=["id1", "v1"])
+  ddf.groupby("id1", dropna=False, observed=True).agg({"v1": "sum"}).compute()
