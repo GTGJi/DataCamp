@@ -1,0 +1,8 @@
+from datetime import dataetime, timedelta
+
+def round_dt(dt, delta):
+  return datetime.min + round((dt-datetime.min)/delta) * delta
+
+delta = timedelta(minutes=15)
+for idx, i in enumerate(ash_ob['Date_Time']):
+  ash_ob.loc[idx,'Date_Time']  = round_dt(i.to_pydatetime(),delta)
